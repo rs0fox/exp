@@ -1,0 +1,22 @@
+version: 0.0.1
+os: linux
+files:
+  - source: target/hello-world.war
+    destination: /usr/local/tomcat/webapps/hello-world.war
+  - source: build.sh
+    destination: /usr/local/bin/build.sh
+  - source: deploy.sh
+    destination: /usr/local/bin/deploy.sh
+  - source: start.sh
+    destination: /usr/local/bin/start.sh
+permissions:
+  - execute: true
+    file: /usr/local/tomcat/webapps/hello-world.war
+  - execute: true
+    file: /usr/local/bin/build.sh
+  - execute: true
+    file: /usr/local/bin/deploy.sh
+  - execute: true
+    file: /usr/local/bin/start.sh
+
+
